@@ -3,24 +3,22 @@
 
  <%= @article.title %>
 
-
-
 </p>
 
 <p>
   <strong>Text:</strong>
 
-
-
   <%= @article.text %>
 
 </p>
+
 <hr>
 
 <h2>Comments</h2>
+
   <%= @article.comments.each do |comment| %>
 
-  <p>
+   <p>
   <strong>Commenter:</strong>
   <%= comment.commenter %>
   
@@ -30,13 +28,18 @@
   <strong>Comment</strong>
   <%= comment.body %>
   </p>
-
+  <p>
+  <%= link_to 'Delete Comment', [comment.article, comment],
+    method: :Detele,
+   data:{confirm: 'are you sure you want to delete?'} %>
+  
+  </p>
+<hr>
 <% end %>
 
- <hr>
- <h2>Add  Comments</h2>
+ <h2>Add  Comment </h2>
 
-<%= form_for([@article, @article.comments.build]) do |f| %>
+<%= form_for([ @article, @article.comments.build]) do |f| %>
 
   <p>
 
