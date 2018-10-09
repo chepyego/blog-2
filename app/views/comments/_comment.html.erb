@@ -1,17 +1,21 @@
+
+
+<h2>Comments</h2>
+<% @article.comments.each do |comment| %>
 <p>
-<strong>Commenter<strong>
-<%= comment.commenter %>
-
-</p>
-
-<p>
-<strong>Comment:</strong>
-<%= comment.body %>
-
+  <strong>Commenter:</strong>
+  <%= comment.commenter %>
 </p>
 <p>
-<%=link_to 'Destroy comment', [comment.article, comment]
-    method: :Delete,
-    data{confirm:'Are you sure?'}%>
+<%= comment.created_at %>
 </p>
-<hr>
+<p>
+  <strong>Comment</strong>
+  <%= truncate(comment.body, length:300) %>
+</p>
+<p>
+   <%= link_to 'Delete Comment',[comment.article,comment],
+     method: :Detele,
+     data: {confirm: 'are you sure you want to delete?'} %>
+</p>
+<% end %> 
