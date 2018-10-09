@@ -1,48 +1,50 @@
+
 <p>
- <strong>Title:</strong>
- <%= @article.title %>
+<strong>Title:</strong>
+<%= @article.title %>
 </p>
 
 <p>
-  <strong>Text:</strong>
-  <%= @article.text %>
+<strong>Text:</strong>
+<%= @article.text %>
 </p>
 <hr>
 
 <h2>Comments</h2>
-  <% @article.comments.each do |comment| %>
-   <p>
-    <strong>Commenter:</strong>
-    <%= comment.commenter %>
-  </p>
-  <p>
-    <strong>Comment</strong>
-    <%= comment.body %>
-  </p>
- <p>
-  <%= link_to 'Delete Comment', article_comments_path(comment),
-    method: :Detele,
-   data: {confirm: 'are you sure you want to delete?'} %>
-  </p>
+<% @article.comments.each do |comment| %>
+<p>
+<strong>Commenter:</strong>
+<%= comment.commenter %>
+</p>
+<p>
+<strong>Comment</strong>
+<%= comment.body %>
+</p>
+<p>
+<%= link_to 'Delete Comment',[comment.article,comment],
+     method: :Detele,
+     data: {confirm: 'are you sure you want to delete?'} %>
+</p>
 <hr>
 <% end %>
 
- <h2>Add  Comment </h2>
+<h2>Add  Comment </h2>
 <%= form_for([ @article, @article.comments.build]) do |f| %>
-  <p>
-   <%= f.label :commenter %><br>
-   <%= f.text_field :commenter %>
+<p>
+<%= f.label :commenter %><br>
+<%= f.text_field :commenter %>
 </p>
 <p>
-  <%= f.label :body %><br>
-  <%= f.text_area :body %>
+<%= f.label :body %><br>
+<%= f.text_area :body %>
 </p>
 <p>
-  <%= f.submit %>
+<%= f.submit %>
 </p>
 <% end %>
 
 <p>
-  <%= link_to 'Back', articles_path(@articles) %> |
-  <%= link_to 'Home', welcome_index_path %>
+<%= link_to 'Back', articles_path(@articles) %> |
+<%= link_to 'Home', welcome_index_path %>
 </p>
+
