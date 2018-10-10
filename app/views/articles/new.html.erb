@@ -1,7 +1,12 @@
+<div class="row">
+<div class="col"></div>
+<div class="col-md-7">
+
 <h1>Create new articles!</h1>
 
 <%= form_for :article , url: articles_path do |f| %>
-          
+<div class="field" style="100%;">
+
 <% if @article.errors.any? %>
 <div id="error_explanation">
         <h2>
@@ -22,37 +27,40 @@
 
         
         </p>
-        </div>
+        
         <% end %> 
 
         <p>
 
         <%= f.label :title %><br>
-        <%= f.text_field :title %> 
+        <%= f.text_field :title ,class:'form-control'%> 
         
         </p>
 
         <p> 
         <%= f.label :text %><br>
-        <%= f.text_field :text %>     
+        <%= f.text_area :text, class:'form-control' %>     
         
         
         
         </p>
 
         <p>
-        <%= f.submit %>
+        <%=f.submit class:'btn btn-lg btn-success' %>
         
         </p>
-         
+         </div>
   <% end %>
   <p>
 
-    <%= link_to 'Back', articles_path %>
+    <%= link_to 'Back', articles_path, class:'btn btn-md btn-info' %>
 
-  |  <%= link_to 'Home', welcome_index_path %>
+   <%= link_to 'Home', welcome_index_path, class:'btn btn-md btn-primary' %>
 
   </p>
+  </div> 
+ <div class="col"></div>
+</div>
 
   
 
