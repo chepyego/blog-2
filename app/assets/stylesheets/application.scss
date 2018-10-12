@@ -12,6 +12,8 @@
  *
  */
  @import "bootstrap";
+ @import "welcome";
+ @import "navbar";
 
 
  .container{
@@ -25,3 +27,15 @@
  thead{
      background-color: #dddddd;
  }
+ body {
+    min-height: 75rem;
+    padding-top: 4.5rem;
+  }
+  .form-control{
+      background-color: #efeeef;
+      border:3px solid skyblue;
+  }
+  .btn-light{
+    background-color: #efeeef;
+    border:3px solid skyblue;
+  }
