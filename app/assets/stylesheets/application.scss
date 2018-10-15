@@ -14,6 +14,7 @@
  @import "bootstrap";
  @import "welcome";
  @import "navbar";
+ @import "footer";
 
 
  .container{
@@ -25,11 +26,14 @@
  }
 
  thead{
-     background-color: #dddddd;
+     background-color: #222222;;
+     color: #ffffff;
  }
  body {
-    min-height: 75rem;
+    min-height: 50rem;
     padding-top: 4.5rem;
+    background-color: lightblue;
+
   }
   .form-control{
       background-color: #efeeef;
@@ -38,4 +42,8 @@
   .btn-light{
     background-color: #efeeef;
     border:3px solid skyblue;
+  }
+  .jumbotron{
+      background-color: #ffffff; 
+
   }
