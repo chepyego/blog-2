@@ -2,6 +2,7 @@
 
     background-color: skyblue;
     min-height: 10rem;
+    margin-top: 2rem;
 }
 
 .col-md-4{
@@ -11,9 +12,22 @@
 }
 
 .darker{
-    background-color: #ffffff
+    background-color: skyblue;
 }
 
 .dark{
-    background-color: #552233;
+    background-color:skyblue;
+}
+.padding{
+padding: 2rem;
+padding-bottom: 1;
+}
+.white{
+    color: #ffffff  ;
+}
+.grey{
+    color: #222222;
+}
+.small-font{
+    font-size: 11px;
 }

@@ -1,13 +1,24 @@
 .navbar{
 
-    background-color: skyblue !important;
+    background-color: lightblue !important;
 }
 .nav-link{
+    color: #222222;
 
+}
+#active_nav-link{
+    display: block;
+    padding: 0.5rem 1rem;
+    color:#ffffff  !important;
+}
+.active_nav-link{
+    display:block;
+    padding: 0.5rem 1rem;
+    color:#ffffff !important;
 }
 .nav-item a{
     font-weight: bold;
-    color: black;
+    color: black !important;
 
 }
 

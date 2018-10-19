@@ -32,9 +32,24 @@
  body {
     min-height: 50rem;
     padding-top: 4.5rem;
-    background-color: lightblue;
+    background-color: #ffffff;
+    overflow-x: hidden;
+    
 
   }
+  .white{
+      color: #ffffff;
+  }
+  .linktxt{
+      color: #222222;
+  }
+  .linktxt:hover{
+      color: #ffffff;
+  }
+
+//   .container{
+//       padding-top: 15px;
+//   }
   .form-control{
       background-color: #efeeef;
       border:3px solid skyblue;
